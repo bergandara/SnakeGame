@@ -12,5 +12,14 @@ import javax.swing.JFrame;
  * @author bernardogandara
  */
 public class GameFrame extends JFrame{
-    
+    GameFrame(){    //GameFrame constructor
+        
+        this.add(new GamePanel());  //same as creating an instance of GamePanel panel = new GamePanel();
+        this.setTitle("Snake");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
+    }
 }

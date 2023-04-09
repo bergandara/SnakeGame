@@ -14,7 +14,10 @@ import javax.swing.JPanel;
  * @author bernardogandara
  */
 public class GamePanel extends JPanel implements ActionListener{
-
+    GamePanel(){    //GamePanel constructor
+        
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
