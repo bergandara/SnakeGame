@@ -33,6 +33,12 @@ public class GamePanel extends JPanel implements ActionListener{
     Random random;
     
     GamePanel(){    //GamePanel constructor
+        random = new Random();
+        this.setPreferredSize(new Dimension(SCREEN_WIDTH, SCREEN_HEIGHT));
+        this.setBackground(Color.black);
+        this.setFocusable(true);
+        this.addKeyListener(new MyKeyAdapter());
+        startGame();
         
     }
     
@@ -48,6 +54,10 @@ public class GamePanel extends JPanel implements ActionListener{
         
     }
     
+    public void newApple(){
+        
+        
+    }
     public void move(){
         
     }
@@ -69,7 +79,7 @@ public class GamePanel extends JPanel implements ActionListener{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public class myKeyAdapter extends KeyAdapter{
+    public class MyKeyAdapter extends KeyAdapter{
         @Override
         public void KeyPressed(KeyEvent e){
             
