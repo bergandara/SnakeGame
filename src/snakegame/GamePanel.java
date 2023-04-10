@@ -105,7 +105,11 @@ public class GamePanel extends JPanel implements ActionListener{
     }
     
     public void checkApple(){
-        
+        if((x[0] == appleX) && (y[0] == appleY)){
+            bodyParts++;
+            applesEaten++;
+            newApple();
+        }
     }
     
     public void checkCollisions(){
@@ -155,7 +159,8 @@ public class GamePanel extends JPanel implements ActionListener{
     
     public class MyKeyAdapter extends KeyAdapter{
         
-        public void KeyPressed(KeyEvent e){
+        @Override
+        public void keyPressed(KeyEvent e){
             switch(e.getKeyCode()){
                 case KeyEvent.VK_LEFT:
                     if(direction != 'R'){
