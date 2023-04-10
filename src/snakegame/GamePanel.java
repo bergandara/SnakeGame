@@ -118,7 +118,12 @@ public class GamePanel extends JPanel implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-         //To change body of generated methods, choose Tools | Templates.
+         if(running){
+             move();
+             checkApple();
+             checkCollisions();
+         }
+         repaint();
     }
     
     
